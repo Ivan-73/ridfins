@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>RIDFINS · 俄罗斯物流合作伙伴</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        body {
+            background: #f0f4f8;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+        }
+        .card {
+            max-width: 420px;
+            width: 100%;
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 20px 40px rgba(0, 20, 40, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e8f0;
+        }
+        .header {
+            background: linear-gradient(145deg, #0b2f54 0%, #1a4b7a 100%);
+            color: white;
+            padding: 30px 24px 20px 24px;
+            text-align: center;
+        }
+        .logo {
+            font-size: 2.6rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            background: rgba(255,255,255,0.15);
+            display: inline-block;
+            padding: 8px 28px;
+            border-radius: 60px;
+            backdrop-filter: blur(4px);
+            margin-bottom: 12px;
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            text-decoration: none;
+        }
+        .logo span {
+            font-weight: 300;
+            font-size: 1.2rem;
+            margin-left: 4px;
+        }
+        .company-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .company-desc {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            background: rgba(255,255,255,0.2);
+            padding: 6px 16px;
+            border-radius: 40px;
+            display: inline-block;
+        }
+        .flag {
+            display: inline-block;
+            background: #f7b731;
+            color: #1e3a5f;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 30px;
+            margin-left: 8px;
+        }
+        .content {
+            padding: 24px;
+        }
+        .section {
+            margin-bottom: 24px;
+        }
+        .section-title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #6b7f99;
+            margin-bottom: 12px;
+            border-left: 4px solid #0b2f54;
+            padding-left: 10px;
+            font-weight: 600;
+        }
+        .info-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px solid #eef3f8;
+        }
+        .info-row:last-child {
+            border-bottom: none;
+        }
+        .emoji {
+            font-size: 1.3rem;
+            min-width: 36px;
+            text-align: center;
+        }
+        .text {
+            flex: 1;
+            word-break: break-word;
+        }
+        .label {
+            font-size: 0.75rem;
+            color: #8a9bb5;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+        .value {
+            font-weight: 500;
+            color: #1a2b3c;
+            font-size: 1rem;
+        }
+        .value a {
+            color: #1a4b7a;
+            text-decoration: none;
+            border-bottom: 1px dotted #a0b8d0;
+        }
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 16px 0 8px;
+        }
+        .badge {
+            background: #e7f0fd;
+            color: #0b2f54;
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid #c9daf5;
+        }
+        .qr-placeholder {
+            margin-top: 20px;
+            background: #f2f7ff;
+            border-radius: 18px;
+            padding: 16px;
+            text-align: center;
+            border: 2px dashed #aac3e0;
+        }
+        .qr-note {
+            font-size: 0.85rem;
+            color: #2f5688;
+            margin-bottom: 8px;
+        }
+        .qr-box {
+            background: white;
+            padding: 10px;
+            border-radius: 12px;
+            display: inline-block;
+            border: 1px solid #b9ceec;
+        }
+        .footer-note {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #6f8faf;
+            text-align: center;
+            border-top: 1px solid #dee9f5;
+            padding-top: 16px;
+        }
+        .inn {
+            font-family: monospace;
+            background: #f0f4fa;
+            padding: 4px 8px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            color: #163a5e;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <div class="logo">RIDFINS</div>
+            <div class="company-name">RIDFINS LLC</div>
+            <div class="company-desc">
+                俄罗斯 · 克拉斯诺亚尔斯克 <span class="flag">港口城市</span>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- 关于我 -->
+            <div class="section">
+                <div class="section-title">⚓ 合作伙伴 / 联系人</div>
+                <div class="info-row">
+                    <div class="emoji">👤</div>
+                    <div class="text">
+                        <div class="label">姓名</div>
+                        <div class="value">Вадим Ридфинс (Vadim RIDFINS)</div>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="emoji">🏢</div>
+                    <div class="text">
+                        <div class="label">公司 (俄文)</div>
+                        <div class="value">ООО "РИДФИНС"</div>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="emoji">📍</div>
+                    <div class="text">
+                        <div class="label">总部</div>
+                        <div class="value">Красноярск, Россия (叶尼塞河港口)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 注册信息 (для солидности) -->
+            <div class="section">
+                <div class="section-title">📋 公司注册号</div>
+                <div class="badge-container">
+                    <span class="badge">ИНН 2366047540</span>
+                    <span class="badge">ОГРН 1242300015440</span>
+                    <span class="badge">КПП 245201001</span>
+                </div>
+            </div>
+
+            <!-- 联系方式 -->
+            <div class="section">
+                <div class="section-title">📱 联系方式</div>
+                <div class="info-row">
+                    <div class="emoji">📞</div>
+                    <div class="text">
+                        <div class="label">WhatsApp / 电话</div>
+                        <div class="value"><a href="tel:+79933157101">+7 993 315-71-01</a></div>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="emoji">✉️</div>
+                    <div class="text">
+                        <div class="label">邮箱 (主)</div>
+                        <div class="value"><a href="mailto:vridfins@outlook.com">vridfins@outlook.com</a></div>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="emoji">📧</div>
+                    <div class="text">
+                        <div class="label">邮箱 (备用)</div>
+                        <div class="value"><a href="mailto:ridfinsvadim@yandex.ru">ridfinsvadim@yandex.ru</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 业务简介 (для китайцев) -->
+            <div class="section">
+                <div class="section-title">🚛 业务范围</div>
+                <div style="background: #f6faff; border-radius: 16px; padding: 14px;">
+                    <p style="margin-bottom: 8px; font-weight: 500;">✅ 日本 → 天津 → 克拉斯诺亚尔斯克</p>
+                    <p style="font-size: 0.9rem; color: #254e77;">摩托车配件 · 拼箱货 (LCL 50–500 кг) · 过境运输 (保税) · TIR 公路直达</p>
+                    <p style="margin-top: 10px; font-size: 0.85rem; background: #d9e9ff; padding: 6px 12px; border-radius: 30px; display: inline-block;">⛴️ 克拉斯诺亚尔斯克 — 叶尼塞河港口 (杜丁卡/诺里尔斯克)</p>
+                </div>
+            </div>
+
+            <!-- QR-код (место под ваш реальный QR) -->
+            <div class="qr-placeholder">
+                <div class="qr-note">📷 扫一扫保存联系人 / 访问电子名片</div>
+                <div class="qr-box">
+                    [ ЗДЕСЬ БУДЕТ ВАШ QR-КОД ]
+                </div>
+                <div style="margin-top: 12px; font-size: 0.8rem;">或访问: <span style="background: #eee; padding: 4px 8px; border-radius: 6px;">https://ваш-аккаунт.github.io/ridfins</span></div>
+            </div>
+
+            <!-- 额外提示 -->
+            <div class="footer-note">
+                ⭐ 长期合作 · 小批量试单 · 期待面谈<br>Я готов к переговорам через переводчик в телефоне.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
